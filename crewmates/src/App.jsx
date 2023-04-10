@@ -2,33 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { createClient } from '@supabase/supabase-js';
+import HomePage from './components/HomePage';
+import NewCrewmatePage from './components/NewCrewmatePage';
+import CrewmatePage from './components/CrewmatePage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+const supabase = createClient('https://odulradenujvtqndhfxp.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kdWxyYWRlbnVqdnRxbmRoZnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODExNDk4MDcsImV4cCI6MTk5NjcyNTgwN30.2NejGmYaQFcYySsBbQCIkmcF9roVnIaCzBvDP04HAR4');
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/new-crewmate" element={<NewCrewmatePage />} />
+          <Route path="/crewmate/:id" element={<CrewmatePage />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    </BrowserRouter>
   )
 }
 
