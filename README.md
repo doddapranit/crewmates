@@ -1,20 +1,7 @@
-# Web Development Project 7 - Crewmates
 
-Submitted by: Pranit Dodda
 
 This web app: **add, remove, and edit crewmates**
 
-Time spent: **7** hours spent in total
-
-## Required Features
-
-The following **required** functionality is completed:
-
-- [x] **A create form allows users to add new cremates**
-- [x] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
-- [x] **The site displays a summary page of all the user's added crewmates**
-- [x] **A previously created crewmate can be updated and deleted from the crewmate list**
-- [x] **Each crewmate has a direct, unique link to an info page about them**
 
 
 ## Video Walkthrough
@@ -25,9 +12,6 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with Licecap 2023
 
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
